@@ -1,0 +1,44 @@
+{
+  "account": {
+    "type": "CREDIT",
+    "status": "ACTIVE",
+    "prepaid": {
+      "cardNumber": "7777115039916098",
+      "securityCode": "6098",
+      "expiryDate": {
+        "month": "09",
+        "year": "20"
+      }
+    },
+    "deviceId": "ea505f11-f45c-4c1f-8a84-506e753e134b",
+    "nickName": "My Favorite Account"
+  },
+  "accountOwner": { 
+  "deviceInfo": {
+    "id": "537edec8-d33e-4ee8-93a7-b9f61876950c",
+    "kind": "mobile",
+    "details": [
+      {
+        "provider": "InAuth",
+        "dataCapture": {
+          "rawData": "aaaaaXREUVZGRlFY...aMV",
+          "dataEventId": "BB8E4E92...Fz1E063113",
+          "captureTime": "2016-04-16T16:06:05Z"
+        },
+        "dataStatic": {
+          "os": "Android 5.1.1 Lollipop",
+          "osVersion": "5.1.1 Lollipop",
+          "model": "XT1540",
+          "type": "Moto G"
+        },
+        "dataDynamic": {
+          "latitude": "13.0827 N",
+          "longitude": "80.2707 E",
+          "ipAddress": "172.27.37.221",
+          "captureTime": "2016-04-16T16:06:05Z"
+        }
+      }
+     ]
+   }
+  }
+}
