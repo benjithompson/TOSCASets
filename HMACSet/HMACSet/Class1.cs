@@ -103,7 +103,7 @@ namespace Tutorial
         //convert /r/n to just /n to match Postman Payload(
         public string convertPayload(string payload)
         {
-            return payload.Replace("\r\n", "\n").Replace("\t", "  ");
+            return payload.Replace("\r\n", "\n");
         }
 
         private Int64 GetTime()
