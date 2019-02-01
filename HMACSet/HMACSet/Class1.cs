@@ -72,7 +72,7 @@ namespace Tutorial
             {
                 string hmacSignatureString = GetHmacSignature(key, secret, method, payload, time);
                 HandleActualValue(testAction, hmacSignature, hmacSignatureString);
-                return new PassedActionResult(String.Format("HMAC Calculated {0}\r\nValues:\r\nKey: {1}\r\nSecret: {2}\r\nMethod: {3}\r\nPayload:\r\n{4}\r\nTimeStamp: {5} ", hmacSignatureString, key.Value, secret.Value, method.Value, payload.Value, time));
+                return new PassedActionResult(String.Format("HMAC Calculated {0}\r\nValues:\r\nKey: {1}\r\nSecret: {2}\r\nMethod: {3}\r\nPayload:\r\n{4}\r\nTimeStamp: {5} ", hmacSignatureString, key.Value, secret.Value, method.Value, convertToHex(payload.Value), time));
             }
         }
 
@@ -80,13 +80,15 @@ namespace Tutorial
         {
 
             string rawSignature = key.Value + ':' + time;
-            string requestBody = convertPayload(payload.Value);
-            var encoding = new System.Text.UTF8Encoding();
+            //string requestBody = convertPayload(payload.Value);
+            string requestBody = payload.Value;
+            Console.WriteLine(requestBody);
+            var encoding = new System.Text.ASCIIEncoding();
             var a = new SHA256Managed();
             
             if (method.Value.ToUpper() != "GET" && method.Value.ToUpper() != "DELETE")
             {
-                string b64Body = Convert.ToBase64String(a.ComputeHash(new System.Text.UTF8Encoding().GetBytes(requestBody)));
+                string b64Body = Convert.ToBase64String(a.ComputeHash(new System.Text.ASCIIEncoding().GetBytes(requestBody)));
                 rawSignature = rawSignature + ":" + b64Body;
             }
 
@@ -113,6 +115,23 @@ namespace Tutorial
             TimeSpan t = (DateTime.Now.ToUniversalTime() - st);
             retval = (Int64)(t.TotalMilliseconds + 0.5);
             return retval;
+        }
+        
+        private string convertToHex(string str)
+        {
+            char[] charValues = str.ToCharArray();
+            string hexOutput = "";
+            foreach (char _eachChar in charValues)
+            {
+                // Get the integral value of the character.
+                int value = Convert.ToInt32(_eachChar);
+                // Convert the decimal value to a hexadecimal value in string form.
+                hexOutput += String.Format("{0:X}", value);
+                // to make output as your eg 
+                //  hexOutput +=" "+ String.Format("{0:X}", value);
+
+            }
+            return hexOutput;
         }
     }
 }
