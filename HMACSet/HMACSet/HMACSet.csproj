@@ -40,20 +40,20 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Tricentis.Automation.Interaction">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.Automation.Interaction.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.Automation.Interaction.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tricentis.AutomationBase">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.AutomationBase.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.AutomationBase.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tricentis.AutomationObjects">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.AutomationObjects.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\Tricentis.AutomationObjects.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="HMACSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

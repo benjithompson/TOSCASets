@@ -14,6 +14,8 @@ using Tricentis.Automation.Creation.Attributes;
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+
+//Added to link Engine name in Module
 [assembly: EngineId("SETEngine")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
