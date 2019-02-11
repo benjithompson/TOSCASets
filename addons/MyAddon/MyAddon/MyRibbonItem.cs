@@ -14,6 +14,8 @@ namespace MyAddon
 
         public override string MenuText => "MyAddOnItem";
 
+        public override string MenuItemImageName => "Resources.Icon1.png";
+
         public override void Execute(TCAddOnTaskContext context)
         {
             context.ShowMessageBox("Ribbon", "You clicked my ribbon item");
