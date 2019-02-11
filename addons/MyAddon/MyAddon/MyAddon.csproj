@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DecoratedRunTask.cs" />
     <Compile Include="MyAddon.cs" />
+    <Compile Include="MyRibbonItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
